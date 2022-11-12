@@ -16,3 +16,21 @@ https://www.acmicpc.net/problem/11047
 
 """
 
+
+
+n, k = map(int, input().split()) 
+
+Ai= []
+for i in range(n):
+    Ai.append(int(input()))
+count = 0
+
+
+for j in reversed(Ai):
+    if k == 0:
+        break
+    while k >= j:
+        count += k//j
+        k %= j
+        
+print(count)

@@ -13,46 +13,10 @@ X가 2로 나누어 떨어지면, 2로 나눈다.
 첫째 줄에 연산을 하는 횟수의 최솟값을 출력한다.
 
 """
-
 n = int(input())
 
-n1 = n
-n2 = n
-n3 = n
-# range(1, 10**6)
+dP = [0] *10
 
-count1 = 0
-count2 = 0
-count3 = 0
-
-while n1>1:
-
-    if n1%3 == 0:
-        n1 /= 3
-        count1 += 1
-    
-    elif n1%2 == 0:
-        n1 /= 2
-        count1 += 1
-    
-    else:
-        n1 -= 1
-        count1 += 1
-
-
-while n2>1:
-
-    # if n2%3 == 1 or 2:
-    if n2%3 != 0:
-        n2 -= 1
-        count2 += 1
-    
-    elif n2%3 == 0:
-        n2 /= 3
-        count2 += 1
-    
-    elif n2%2 == 0:
-        n2 /= 2
-        count2 += 1
-
-print(min(count1,count2))
+print(n)
+for i in range(1, n):
+    dp[i] = dp[i-1] + 1
